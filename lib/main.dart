@@ -17,8 +17,6 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
             backgroundColor: Colors.teal,
             titleTextStyle: TextStyle(color: Colors.white, fontSize: 24)),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
       ),
       home: const WhatsAppScreen(),
     );
