@@ -4,7 +4,7 @@ import 'package:whatsapp_clone/view/camera.dart';
 import 'package:whatsapp_clone/view/chat_screen.dart';
 import 'package:whatsapp_clone/view/groups.dart';
 import 'package:whatsapp_clone/view/settings.dart';
-import 'package:whatsapp_clone/view/status.dart';
+import 'package:whatsapp_clone/view/update.dart';
 import 'package:shimmer/shimmer.dart';
 
 class WhatsAppScreen extends StatefulWidget {
@@ -85,7 +85,7 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
                 ),
                 Tab(
                   child: Text(
-                    'Status',
+                    'Updates',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -100,7 +100,7 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
         body: const TabBarView(children: [
           CameraScreen(),
           ChatScreen(),
-          StatusScreen(),
+          UpdateScreen(),
           CallScreen(),
         ]),
       ),

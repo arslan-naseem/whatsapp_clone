@@ -12,7 +12,7 @@ class _CallScreenState extends State<CallScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-        itemCount: 12, // Total number of items including static items
+        itemCount: 20,
         itemBuilder: (context, index) {
           if (index == 0) {
             return const ListTile(
@@ -38,7 +38,7 @@ class _CallScreenState extends State<CallScreen> {
               ),
             );
           } else {
-            final listItemIndex = index - 2; // Adjusted index for list items
+            final listItemIndex = index - 2;
             return ListTile(
               title: const Text(
                 'Arslan',
@@ -63,11 +63,11 @@ class _CallScreenState extends State<CallScreen> {
               trailing: listItemIndex.isEven
                   ? const Icon(
                       Icons.call,
-                      color: Colors.green,
+                      color: Colors.teal,
                     )
                   : const Icon(
                       Icons.video_call,
-                      color: Colors.green,
+                      color: Colors.teal,
                     ),
             );
           }

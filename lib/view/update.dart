@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:whatsapp_clone/utils/components/button.dart';
 
-class StatusScreen extends StatefulWidget {
-  const StatusScreen({super.key});
+class UpdateScreen extends StatefulWidget {
+  const UpdateScreen({super.key});
 
   @override
-  State<StatusScreen> createState() => _StatusScreenState();
+  State<UpdateScreen> createState() => _UpdateScreenState();
 }
 
-class _StatusScreenState extends State<StatusScreen> {
+class _UpdateScreenState extends State<UpdateScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width * 1;
@@ -133,7 +131,7 @@ class _StatusScreenState extends State<StatusScreen> {
           child: const Center(
             child: Icon(
               Icons.camera_alt,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ));

@@ -14,7 +14,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-          itemCount: 10,
+          itemCount: 30,
           itemBuilder: ((context, index) {
             return const ListTile(
               title: Text(
