@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/view/calls.dart';
+import 'package:whatsapp_clone/view/camera.dart';
 import 'package:whatsapp_clone/view/chat_screen.dart';
+import 'package:whatsapp_clone/view/groups.dart';
+import 'package:whatsapp_clone/view/settings.dart';
+import 'package:whatsapp_clone/view/status.dart';
+import 'package:shimmer/shimmer.dart';
 
 class WhatsAppScreen extends StatefulWidget {
   const WhatsAppScreen({super.key});
@@ -16,7 +22,18 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
       initialIndex: 1,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Whatsapp'),
+          title: Shimmer.fromColors(
+            baseColor: Colors.white,
+            highlightColor: Colors.grey,
+            child: const Text(
+              'Whatsapp',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
           actions: [
             const Icon(
               Icons.search,
@@ -30,10 +47,16 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
                 iconColor: Colors.white,
                 onSelected: (value) {
                   if (value == 'value2') {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: ((context) => const ())));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const SettingScreen())));
+                  }
+                  if (value == 'value1') {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const GroupsScreen())));
                   }
                 },
                 itemBuilder: ((context) {
@@ -75,10 +98,10 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
               ]),
         ),
         body: const TabBarView(children: [
-          Text('Camera'),
+          CameraScreen(),
           ChatScreen(),
-          Text('Status'),
-          Text('Camera'),
+          StatusScreen(),
+          CallScreen(),
         ]),
       ),
     );

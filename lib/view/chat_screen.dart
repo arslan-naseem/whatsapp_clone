@@ -19,9 +19,9 @@ class _ChatScreenState extends State<ChatScreen> {
             return const ListTile(
               title: Text(
                 'Arslan Nasim',
-                style: boldTextStyle,
+                style: boldText,
               ),
-              subtitle: Text('Hi, what\'s up?'),
+              subtitle: Text('Hi, How do you do?'),
               leading: CircleAvatar(
                 backgroundImage: AssetImage('assets/images/profile.jpg'),
               ),
