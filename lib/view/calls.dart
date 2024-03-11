@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/utils/style.dart';
 
 class CallScreen extends StatefulWidget {
   const CallScreen({super.key});
