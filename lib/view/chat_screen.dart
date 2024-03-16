@@ -16,16 +16,16 @@ class _ChatScreenState extends State<ChatScreen> {
       body: ListView.builder(
           itemCount: 30,
           itemBuilder: ((context, index) {
-            return const ListTile(
+            return ListTile(
               title: Text(
-                'Arslan Nasim',
+                'User ${index + 1}',
                 style: boldText,
               ),
-              subtitle: Text('Hi, How do you do?'),
-              leading: CircleAvatar(
+              subtitle: const Text('Hi, How do you do?'),
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage('assets/images/profile.jpg'),
               ),
-              trailing: Text('01/01/2024'),
+              trailing: const Text('01/01/2024'),
             );
           })),
     );

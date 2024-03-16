@@ -62,8 +62,8 @@ class _UpdateScreenState extends State<UpdateScreen> {
               ],
             ),
             Text(
-              textAlign: TextAlign.left,
-              'Stay updated on the topics that matter to you. Find \nchannels to follow below',
+              // textAlign: TextAlign.left,
+              'Stay updated on the topics that matter to you. Find\nchannels to follow below',
               style: TextStyle(color: Colors.grey.shade500),
             ),
             SizedBox(
@@ -88,7 +88,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                           backgroundImage:
                               AssetImage('assets/images/profile.jpg'),
                         ),
-                        const Text('TV Channel'),
+                        Text('Channel ${index + 1}'),
                         Container(
                           height: 20,
                           width: 80,

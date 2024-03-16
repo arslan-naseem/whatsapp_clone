@@ -40,9 +40,9 @@ class _CallScreenState extends State<CallScreen> {
           } else {
             final listItemIndex = index - 2;
             return ListTile(
-              title: const Text(
-                'Arslan',
-                style: TextStyle(
+              title: Text(
+                'user ${index - 1}',
+                style: const TextStyle(
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
                 ),
